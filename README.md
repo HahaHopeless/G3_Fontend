@@ -23,6 +23,6 @@ You must have the following installed on your machine to run this project succes
 
 ## Recommended Versions:
 
-Node v14.16.1 LTS
-React Native v0.64.0
-React v17.0.1
+- Node v14.16.1 LTS
+- React Native v0.64.0
+- React v17.0.1

@@ -1,56 +1,56 @@
 import styles from './styles';
 
 import React from 'react';
-import {View, Text, Image, ScrollView} from 'react-native';
+import {View, ScrollView} from 'react-native';
 import Grid from 'react-native-grid-component';
-import ItemRate from '../../../components/ItemRate';
-import AppHeader from '../../../components/Header';
-import AppFooter from '../../../components/Footer';
+import ItemRate from '../../components/ItemRate';
+import AppHeader from '../../components/Header';
+import AppFooter from '../../components/Footer';
 
 const RateScreen = () => {
   const items = [
     {
-      image: require('../../../assets/items/bio.png'),
+      image: require('../../assets/items/bio.png'),
       price: 4,
       label: 'Bio',
     },
     {
-      image: require('../../../assets/items/bulb.png'),
+      image: require('../../assets/items/bulb.png'),
       price: 15,
       label: 'Bulb',
     },
     {
-      image: require('../../../assets/items/cardboard.png'),
+      image: require('../../assets/items/cardboard.png'),
       price: 8,
       label: 'Cardboard',
     },
     {
-      image: require('../../../assets/items/electronic.png'),
+      image: require('../../assets/items/electronic.png'),
       price: 15,
       label: 'Electronics',
     },
     {
-      image: require('../../../assets/items/glass.png'),
+      image: require('../../assets/items/glass.png'),
       price: 5,
       label: 'Glass',
     },
     {
-      image: require('../../../assets/items/metal.png'),
+      image: require('../../assets/items/metal.png'),
       price: 10,
       label: 'Metal',
     },
     {
-      image: require('../../../assets/items/paper.png'),
+      image: require('../../assets/items/paper.png'),
       price: 12,
       label: 'Paper',
     },
     {
-      image: require('../../../assets/items/plastic.png'),
+      image: require('../../assets/items/plastic.png'),
       price: 20,
       label: 'Plastic',
     },
     {
-      image: require('../../../assets/items/misc.png'),
+      image: require('../../assets/items/misc.png'),
       price: 2,
       label: 'Misc',
     },
@@ -69,8 +69,8 @@ const RateScreen = () => {
   return (
     <View style={{height: '100%'}}>
       <AppHeader />
-      <View style={{flex: 1}}>
-        <ScrollView>
+      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <Grid
             renderItem={(data, i) => renderItem(data, i)}
             data={items}

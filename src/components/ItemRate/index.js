@@ -9,8 +9,10 @@ const ItemRate = ({image, label, price}) => {
       <View style={styles.circleGreen}>
         <Image style={styles.img} source={image} />
       </View>
-      <Text>{label}</Text>
-      <Text style={{fontSize: 18}}>Rs.{price}/KG</Text>
+      <Text style={{fontFamily: 'OpenSans-Regular'}}>{label}</Text>
+      <Text style={{fontSize: 18, fontFamily: 'OpenSans-Regular'}}>
+        Rs.{price}/KG
+      </Text>
     </View>
   );
 };

@@ -2,9 +2,10 @@ import {StyleSheet, Dimension} from 'react-native';
 
 const styles = StyleSheet.create({
   img: {
-    width: 80,
-    height: 80,
+    width: 60,
+    height: 60,
     tintColor: 'white',
+    margin: '5%',
   },
   circleGreen: {
     backgroundColor: 'rgba(57, 207, 157, 1)',

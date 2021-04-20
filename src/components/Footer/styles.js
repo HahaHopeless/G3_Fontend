@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
   btnText: {
     color: '#57606f',
     fontSize: 12,
+    fontFamily: 'OpenSans-Regular',
   },
 });
 

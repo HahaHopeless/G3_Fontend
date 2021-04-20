@@ -3,12 +3,12 @@ import styles from './styles';
 import React, {useState} from 'react';
 import {View, Image, Text, TouchableOpacity} from 'react-native';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
-import CarouselCardItem from '../../../components/CarouselCardItem';
+import CarouselCardItem from '../../components/CarouselCardItem';
 import {StyleProvider} from 'native-base';
-import AppFooter from '../../../components/Footer';
-import AppHeader from '../../../components/Header';
-import getTheme from '../../../../native-base-theme/components';
-import green from '../../../../native-base-theme/variables/variables';
+import AppFooter from '../../components/Footer';
+import AppHeader from '../../components/Header';
+import getTheme from '../../../native-base-theme/components';
+import green from '../../../native-base-theme/variables/variables';
 const HomeScreen = () => {
   const [index, setIndex] = useState(0);
   const isCarousel = React.useRef(null);
@@ -54,12 +54,7 @@ const HomeScreen = () => {
               dotsLength={images.length}
               activeDotIndex={index}
               carouselRef={isCarousel}
-              dotStyle={{
-                width: 10,
-                height: 10,
-                borderRadius: 5,
-                backgroundColor: 'rgba(57, 207, 157, 0.7)',
-              }}
+              dotStyle={styles.paginationDot}
               inactiveDotOpacity={0.4}
               inactiveDotScale={0.6}
               tappableDots={true}
@@ -68,21 +63,21 @@ const HomeScreen = () => {
           </View>
           <View style={styles.userInfo}>
             <Text style={styles.name}>Mohsin Kamal</Text>
-            <Text style={{color: '#2f3542'}}>Available balance</Text>
-            <Text style={{fontSize: 40, color: '#2f3542'}}>Rs.500</Text>
+            <Text style={styles.availableBalance}>Available balance</Text>
+            <Text style={styles.cash}>Rs.500</Text>
           </View>
           <TouchableOpacity style={styles.btnBig}>
             <Text style={styles.btnBigText}>Transaction History</Text>
             <Image
               style={styles.btnBigImage}
-              source={require('../../../assets/icons/transaction.png')}
+              source={require('../../assets/icons/transaction.png')}
             />
           </TouchableOpacity>
           <TouchableOpacity style={styles.btnBig}>
             <Text style={styles.btnBigText}>My Campaigns</Text>
             <Image
               style={styles.btnBigImage}
-              source={require('../../../assets/icons/campaign.png')}
+              source={require('../../assets/icons/campaign.png')}
             />
           </TouchableOpacity>
         </View>

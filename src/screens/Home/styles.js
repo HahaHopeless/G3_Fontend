@@ -1,7 +1,5 @@
-import {StyleSheet, Dimensions} from 'react-native';
-
-const width = Dimensions.get('window').width;
-const height = Dimensions.get('window').height;
+import global_variables from '../../../global_variables';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {},
@@ -33,7 +31,7 @@ const styles = StyleSheet.create({
     color: '#2f3542',
     fontSize: 20,
     zIndex: 2,
-    fontWeight: 'bold',
+    fontFamily: global_variables.fonts.bold,
   },
   btnBigImage: {
     tintColor: 'rgba(57, 207, 157, 0.7)',
@@ -51,10 +49,25 @@ const styles = StyleSheet.create({
   name: {
     height: 68,
     fontSize: 28,
-    fontWeight: 'bold',
     marginBottom: '4%',
     color: '#2f3542',
     textAlign: 'center',
+    fontFamily: global_variables.fonts.bold,
+  },
+  paginationDot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: 'rgba(57, 207, 157, 0.7)',
+  },
+  availableBalance: {
+    color: '#2f3542',
+    fontFamily: global_variables.fonts.regular,
+  },
+  cash: {
+    fontSize: 40,
+    color: '#2f3542',
+    fontFamily: global_variables.fonts.semibold,
   },
 });
 

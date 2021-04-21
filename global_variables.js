@@ -13,7 +13,15 @@ const global_variables = {
   },
   dimensions: {
     deviceWidth: width,
-    deviceWeight: height,
+    deviceHeight: height,
+  },
+  colors: {
+    green: 'rgba(57, 207, 157, 1)',
+    mediumgreen: 'rgba(57, 207, 157, 0.7)',
+    lightgreen: 'rgba(57, 207, 157, 0.5)',
+    white: '#FFFFFF',
+    grey: '#2f3542',
+    lightGrey: '#a4b0be',
   },
 };
 

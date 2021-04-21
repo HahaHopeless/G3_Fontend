@@ -1,29 +1,27 @@
-import {StyleSheet, Dimensions} from 'react-native';
-
-const width = Dimensions.get('window').width;
-const height = Dimensions.get('window').height;
+import global_variables from '../../../global_variables';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'rgba(57, 207, 157, 1)',
+    backgroundColor: global_variables.colors.green,
     height: '100%',
   },
   logo: {
     resizeMode: 'contain',
-    maxHeight: (height / 100) * 16,
+    maxHeight: (global_variables.dimensions.deviceHeight / 100) * 16,
     tintColor: 'white',
     position: 'absolute',
     top: '8%',
   },
   textboxContainer: {
-    width: (width / 95) * 100,
+    width: (global_variables.dimensions.deviceWidth / 95) * 100,
     padding: '2%',
   },
   btn: {
     width: '95%',
-    backgroundColor: 'rgba(57, 207, 157, 1)',
+    backgroundColor: global_variables.colors.green,
     padding: '4%',
     alignItems: 'center',
     justifyContent: 'center',
@@ -39,7 +37,7 @@ const styles = StyleSheet.create({
   card: {
     alignItems: 'center',
     justifyContent: 'center',
-    width: width,
+    width: global_variables.dimensions.deviceWidth,
     backgroundColor: 'white',
     borderTopLeftRadius: 25,
     borderTopRightRadius: 25,
@@ -69,7 +67,7 @@ const styles = StyleSheet.create({
   },
   leaves: {
     height: '200%',
-    width: width,
+    width: global_variables.dimensions.deviceWidth,
     resizeMode: 'contain',
     marginTop: '-30%',
     opacity: 0.7,
@@ -79,6 +77,20 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     flexDirection: 'row',
     marginBottom: '10%',
+  },
+  forgotPassword: {
+    color: global_variables.colors.green,
+  },
+  noAccount: {
+    color: global_variables.colors.lightGrey,
+  },
+  signup: {
+    color: global_variables.colors.green,
+  },
+  footer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: '5%',
   },
 });
 

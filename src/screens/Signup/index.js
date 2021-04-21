@@ -31,7 +31,7 @@ const SignUpScreen = () => {
           <TextField label="Phone" />
           <TextField label="Password" />
           <TouchableOpacity style={styles.btn}>
-            <Text style={{color: 'white', fontSize: 18}}>Sign Up</Text>
+            <Text style={styles.signup}>Sign Up</Text>
           </TouchableOpacity>
         </View>
       </View>

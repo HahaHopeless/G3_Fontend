@@ -73,13 +73,6 @@ const HomeScreen = () => {
               source={require('../../assets/icons/transaction.png')}
             />
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btnBig}>
-            <Text style={styles.btnBigText}>My Campaigns</Text>
-            <Image
-              style={styles.btnBigImage}
-              source={require('../../assets/icons/campaign.png')}
-            />
-          </TouchableOpacity>
         </View>
         <View>
           <AppFooter />

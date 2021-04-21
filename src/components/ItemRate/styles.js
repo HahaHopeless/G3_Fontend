@@ -1,4 +1,5 @@
-import {StyleSheet, Dimension} from 'react-native';
+import global_variables from '../../../global_variables';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   img: {
@@ -8,7 +9,7 @@ const styles = StyleSheet.create({
     margin: '5%',
   },
   circleGreen: {
-    backgroundColor: 'rgba(57, 207, 157, 1)',
+    backgroundColor: global_variables.colors.green,
     borderRadius: 100,
     alignItems: 'center',
     justifyContent: 'center',
@@ -18,6 +19,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginVertical: '5%',
+  },
+  label: {
+    fontFamily: global_variables.fonts.regular,
+  },
+  price: {
+    fontSize: 18,
+    fontFamily: global_variables.fonts.regular,
   },
 });
 

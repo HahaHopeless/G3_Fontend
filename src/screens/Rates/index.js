@@ -67,9 +67,9 @@ const RateScreen = () => {
   );
 
   return (
-    <View style={{height: '100%'}}>
+    <View style={styles.container}>
       <AppHeader />
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <View style={styles.scrollViewContainer}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Grid
             renderItem={(data, i) => renderItem(data, i)}

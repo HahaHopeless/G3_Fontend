@@ -29,25 +29,15 @@ const LoginScreen = () => {
           <TextField label="Email or Phone" />
           <TextField label="Password" />
           <TouchableOpacity style={styles.forgotPass}>
-            <Text
-              style={{
-                color: 'rgba(57, 207, 157, 1)',
-              }}>
-              Forgot Password?
-            </Text>
+            <Text style={styles.forgotPassword}>Forgot Password?</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.btn}>
             <Text style={{color: 'white', fontSize: 18}}>Login</Text>
           </TouchableOpacity>
-          <View
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginVertical: 20,
-            }}>
-            <Text style={{color: '#a4b0be'}}>Dont have an Account?</Text>
+          <View style={styles.footer}>
+            <Text style={styles.noAccount}>Dont have an Account?</Text>
             <TouchableOpacity>
-              <Text style={{color: 'rgba(57, 207, 157, 1)'}}>Sign Up</Text>
+              <Text style={styles.signup}>Sign Up</Text>
             </TouchableOpacity>
           </View>
         </View>

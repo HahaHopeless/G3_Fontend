@@ -8,7 +8,7 @@ import RateScreen from './src/screens/Rates';
 const App = () => {
   return (
     <View>
-      <HomeScreen />
+      <RateScreen />
     </View>
   );
 };

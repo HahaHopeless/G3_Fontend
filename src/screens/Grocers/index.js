@@ -1,30 +1,23 @@
 import styles from './styles';
-import {items} from '../../../dummyData';
+import {grocers} from '../../../dummyData';
 import React from 'react';
 import {View, ScrollView} from 'react-native';
 import Grid from 'react-native-grid-component';
-import ItemRate from '../../components/ItemRate';
+import GrocerItem from '../../components/GrocerItem';
 import AppFooter from '../../components/Footer';
 
 const GrocerScreen = () => {
   const renderItem = (data, i) => (
-    <ItemRate
-      label="Metal"
-      label={data.label}
-      price={data.price}
-      image={data.image}
-      key={i}
-    />
+    <GrocerItem label={data.label} image={data.image} key={i} />
   );
 
   return (
     <View style={styles.container}>
-      {/* <AppHeader /> */}
       <View style={styles.scrollViewContainer}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <Grid
             renderItem={(data, i) => renderItem(data, i)}
-            data={items}
+            data={grocers}
             numColumns={2}
           />
         </ScrollView>

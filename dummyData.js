@@ -45,3 +45,26 @@ export const items = [
     label: 'Misc',
   },
 ];
+
+export const grocers = [
+  {
+    image: require('./src/assets/img/stores/alfatah.png'),
+    label: 'Alfatah',
+  },
+  {
+    image: require('./src/assets/img/stores/carrefour.png'),
+    label: 'Carrefour',
+  },
+  {
+    image: require('./src/assets/img/stores/esajees.jpeg'),
+    label: `Esajee's`,
+  },
+  {
+    image: require('./src/assets/img/stores/greenvalley.jpeg'),
+    label: 'Green Valley',
+  },
+  {
+    image: require('./src/assets/img/stores/metro.png'),
+    label: 'Metro',
+  },
+];

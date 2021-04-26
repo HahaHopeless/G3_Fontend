@@ -14,6 +14,9 @@ const AppStack = createStackNavigator(
       screen: LoginScreen,
       navigationOptions: {
         headerTitle: null,
+        headerStyle: {
+          backgroundColor: global_variables.colors.green,
+        },
       },
     },
     Home: {
@@ -23,7 +26,7 @@ const AppStack = createStackNavigator(
       screen: SignUpScreen,
       navigationOptions: {
         headerTitleStyle: {
-          color: '#FFFFFF',
+          color: global_variables.colors.green,
           fontFamily: global_variables.fonts.semibold,
         },
         headerTitleAlign: 'center',

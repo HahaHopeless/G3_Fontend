@@ -3,14 +3,11 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   img: {
-    width: 60,
-    height: 60,
-    tintColor: 'white',
-    margin: '5%',
+    width: 100,
+    height: 100,
+    resizeMode: 'contain',
   },
   circleGreen: {
-    // backgroundColor: global_variables.colors.green,
-    borderRadius: 100,
     alignItems: 'center',
     justifyContent: 'center',
     padding: '12%',
@@ -21,10 +18,6 @@ const styles = StyleSheet.create({
     marginVertical: '5%',
   },
   label: {
-    fontFamily: global_variables.fonts.regular,
-  },
-  price: {
-    fontSize: 18,
     fontFamily: global_variables.fonts.semibold,
   },
 });

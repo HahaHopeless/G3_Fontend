@@ -5,7 +5,7 @@ import React from 'react';
 import {View, Text, Image} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-const ItemRate = ({image, label, price}) => {
+const GrocerItem = ({image, label, price}) => {
   return (
     <View style={styles.container}>
       <LinearGradient
@@ -26,4 +26,4 @@ const ItemRate = ({image, label, price}) => {
   );
 };
 
-export default ItemRate;
+export default GrocerItem;

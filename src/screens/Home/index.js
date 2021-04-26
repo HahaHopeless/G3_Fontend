@@ -1,15 +1,17 @@
 import styles from './styles';
+import global_variables from '../../../global_variables';
 
 import React, {useState} from 'react';
-import {View, Image, Text, TouchableOpacity} from 'react-native';
+import {View, Image, Text, TouchableOpacity, ScrollView} from 'react-native';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 import CarouselCardItem from '../../components/CarouselCardItem';
 import {StyleProvider} from 'native-base';
 import AppFooter from '../../components/Footer';
-import AppHeader from '../../components/Header';
 import getTheme from '../../../native-base-theme/components';
 import green from '../../../native-base-theme/variables/variables';
-const HomeScreen = () => {
+import LinearGradient from 'react-native-linear-gradient';
+
+const HomeScreen = ({navigation}) => {
   const [index, setIndex] = useState(0);
   const isCarousel = React.useRef(null);
   const images = [
@@ -29,14 +31,15 @@ const HomeScreen = () => {
 
   return (
     <StyleProvider style={getTheme(green)}>
-      <View style={{height: '100%'}}>
-        <AppHeader />
+      <View style={styles.container}>
+        {/* <AppHeader /> */}
+
         <View
           style={{
             alignItems: 'center',
             flex: 1,
           }}>
-          <View style={{paddingTop: '2%', maxHeight: '40%'}}>
+          <View style={{height: '38%'}}>
             <Carousel
               layout="default"
               layoutCardOffset={9}
@@ -62,21 +65,44 @@ const HomeScreen = () => {
             />
           </View>
           <View style={styles.userInfo}>
+            <View style={styles.profilepicContainer}>
+              <Image
+                source={require('../../assets/img/dp.jpeg')}
+                style={styles.profilepic}
+              />
+            </View>
             <Text style={styles.name}>Mohsin Kamal</Text>
             <Text style={styles.availableBalance}>Available balance</Text>
             <Text style={styles.cash}>Rs.500</Text>
+            <TouchableOpacity>
+              <Text style={styles.transactionHistory}>Transaction History</Text>
+            </TouchableOpacity>
           </View>
           <TouchableOpacity style={styles.btnBig}>
-            <Text style={styles.btnBigText}>Transaction History</Text>
-            <Image
-              style={styles.btnBigImage}
-              source={require('../../assets/icons/transaction.png')}
-            />
+            <LinearGradient
+              colors={[
+                global_variables.greenGradient.color1,
+                global_variables.greenGradient.color2,
+              ]}
+              style={{
+                borderRadius: 20,
+                height: '100%',
+                width: '100%',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+              start={{x: 0, y: 0}}
+              end={{x: 1, y: 0}}>
+              <Text style={styles.btnBigText}>Spend Cash</Text>
+              <Image
+                style={styles.btnBigImage}
+                source={require('../../assets/icons/cart.png')}
+              />
+            </LinearGradient>
           </TouchableOpacity>
         </View>
-        <View>
-          <AppFooter />
-        </View>
+
+        <AppFooter navigation={navigation} />
       </View>
     </StyleProvider>
   );

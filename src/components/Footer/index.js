@@ -3,7 +3,7 @@ import styles from './styles';
 import React from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 
-const AppFooter = () => {
+const AppFooter = ({navigation}) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.btn}>
@@ -13,7 +13,11 @@ const AppFooter = () => {
         />
         <Text style={styles.btnText}>Scan</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn}>
+      <TouchableOpacity
+        style={styles.btn}
+        onPress={() => {
+          navigation.navigate('Rates');
+        }}>
         <Image
           style={styles.icon}
           source={require('../../assets/icons/rates.png')}
@@ -27,7 +31,11 @@ const AppFooter = () => {
         />
         <Text style={styles.btnText}>Sell Trash</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.btn}>
+      <TouchableOpacity
+        style={styles.btn}
+        onPress={() => {
+          navigation.navigate('Grocers');
+        }}>
         <Image
           style={styles.icon}
           source={require('../../assets/icons/grocers.png')}

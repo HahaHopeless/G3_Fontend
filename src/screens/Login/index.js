@@ -1,5 +1,5 @@
 import styles from './styles';
-
+import global_variables from '../../../global_variables';
 import React from 'react';
 import {
   View,
@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import TextField from '../../components/TextField';
 
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
@@ -31,12 +31,14 @@ const LoginScreen = () => {
           <TouchableOpacity style={styles.forgotPass}>
             <Text style={styles.forgotPassword}>Forgot Password?</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity
+            style={styles.btn}
+            onPress={() => navigation.replace('Home')}>
             <Text style={{color: 'white', fontSize: 18}}>Login</Text>
           </TouchableOpacity>
           <View style={styles.footer}>
             <Text style={styles.noAccount}>Dont have an Account?</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
               <Text style={styles.signup}>Sign Up</Text>
             </TouchableOpacity>
           </View>

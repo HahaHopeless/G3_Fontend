@@ -18,10 +18,14 @@ const global_variables = {
   colors: {
     green: 'rgba(57, 207, 157, 1)',
     mediumgreen: 'rgba(57, 207, 157, 0.7)',
-    lightgreen: 'rgba(57, 207, 157, 0.5)',
+    lightgreen: '#5FD1B2',
     white: '#FFFFFF',
     grey: '#2f3542',
     lightGrey: '#a4b0be',
+  },
+  greenGradient: {
+    color1: '#98de5b',
+    color2: '#08e1ae',
   },
 };
 

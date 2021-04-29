@@ -12,6 +12,10 @@ target 'gammagreen' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'gammagreenTests' do
     inherit! :complete
     # Pods for testing

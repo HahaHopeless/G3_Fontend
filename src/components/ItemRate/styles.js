@@ -1,5 +1,10 @@
 import global_variables from '../../../global_variables';
 import {StyleSheet} from 'react-native';
+import {
+  responsiveHeight,
+  responsiveWidth,
+  responsiveFontSize,
+} from 'react-native-responsive-dimensions';
 
 const styles = StyleSheet.create({
   img: {
@@ -9,7 +14,6 @@ const styles = StyleSheet.create({
     margin: '5%',
   },
   circleGreen: {
-    // backgroundColor: global_variables.colors.green,
     borderRadius: 100,
     alignItems: 'center',
     justifyContent: 'center',
@@ -18,7 +22,7 @@ const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginVertical: '5%',
+    marginVertical: responsiveHeight(3),
   },
   label: {
     fontFamily: global_variables.fonts.regular,

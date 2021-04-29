@@ -6,10 +6,9 @@ import {View, Text, Image, TouchableOpacity} from 'react-native';
 const GrocerItem = ({image, label}) => {
   return (
     <TouchableOpacity style={styles.container}>
-      <View style={styles.circleGreen}>
+      <View style={styles.imgContainer}>
         <Image style={styles.img} source={image} />
       </View>
-      <Text style={styles.label}>{label}</Text>
     </TouchableOpacity>
   );
 };

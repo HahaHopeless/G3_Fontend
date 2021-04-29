@@ -1,15 +1,21 @@
 import styles from './styles';
 import global_variables from '../../../global_variables';
-
 import React, {useState} from 'react';
-import {View, Image, Text, TouchableOpacity, ScrollView} from 'react-native';
+import {
+  View,
+  Image,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  Platform,
+} from 'react-native';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 import CarouselCardItem from '../../components/CarouselCardItem';
 import {StyleProvider} from 'native-base';
-import AppFooter from '../../components/Footer';
 import getTheme from '../../../native-base-theme/components';
 import green from '../../../native-base-theme/variables/variables';
 import LinearGradient from 'react-native-linear-gradient';
+import MenuButton from '../../components/MenuButton';
 
 const HomeScreen = ({navigation}) => {
   const [index, setIndex] = useState(0);
@@ -39,7 +45,7 @@ const HomeScreen = ({navigation}) => {
             alignItems: 'center',
             flex: 1,
           }}>
-          <View style={{height: '38%'}}>
+          <View style={styles.carousel}>
             <Carousel
               layout="default"
               layoutCardOffset={9}
@@ -78,7 +84,9 @@ const HomeScreen = ({navigation}) => {
               <Text style={styles.transactionHistory}>Transaction History</Text>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity style={styles.btnBig}>
+          <TouchableOpacity
+            style={styles.btnBig}
+            onPress={() => navigation.navigate('Grocers')}>
             <LinearGradient
               colors={[
                 global_variables.greenGradient.color1,
@@ -101,11 +109,23 @@ const HomeScreen = ({navigation}) => {
             </LinearGradient>
           </TouchableOpacity>
         </View>
-
-        <AppFooter navigation={navigation} />
       </View>
     </StyleProvider>
   );
+};
+
+HomeScreen.navigationOptions = navdata => {
+  return {
+    // headerLeft: <MenuButton onPress={() => navigation.toggleDrawer()} />,
+    headerLeft: (
+      <TouchableOpacity
+        onPress={() => {
+          navdata.navigation.toggleDrawer();
+        }}>
+        <MenuButton />
+      </TouchableOpacity>
+    ),
+  };
 };
 
 export default HomeScreen;

@@ -33,7 +33,7 @@ const LoginScreen = ({navigation}) => {
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.btn}
-            onPress={() => navigation.replace('Home')}>
+            onPress={() => navigation.navigate('Tabs')}>
             <Text style={{color: 'white', fontSize: 18}}>Login</Text>
           </TouchableOpacity>
           <View style={styles.footer}>

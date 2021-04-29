@@ -4,9 +4,8 @@ import React from 'react';
 import {View, ScrollView} from 'react-native';
 import Grid from 'react-native-grid-component';
 import ItemRate from '../../components/ItemRate';
-import AppFooter from '../../components/Footer';
 
-const RateScreen = () => {
+const RateScreen = ({navigation}) => {
   const renderItem = (data, i) => (
     <ItemRate
       label="Metal"
@@ -29,9 +28,7 @@ const RateScreen = () => {
           />
         </ScrollView>
       </View>
-      <View>
-        <AppFooter />
-      </View>
+      <View></View>
     </View>
   );
 };

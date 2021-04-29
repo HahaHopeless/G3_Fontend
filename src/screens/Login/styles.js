@@ -1,4 +1,9 @@
 import global_variables from '../../../global_variables';
+import {
+  responsiveHeight,
+  responsiveWidth,
+  responsiveFontSize,
+} from 'react-native-responsive-dimensions';
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
@@ -6,21 +11,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: global_variables.colors.green,
-    height: '100%',
+    height: responsiveHeight(100),
+    width: responsiveWidth(100),
+    flex: 1,
   },
   logo: {
     resizeMode: 'contain',
-    maxHeight: (global_variables.dimensions.deviceHeight / 100) * 16,
+    // maxHeight: (global_variables.dimensions.deviceHeight / 100) * 16,
+    height: responsiveHeight(16),
     tintColor: 'white',
     position: 'absolute',
-    top: '8%',
+    top: responsiveHeight(8),
   },
   textboxContainer: {
-    width: (global_variables.dimensions.deviceWidth / 95) * 100,
+    width: responsiveWidth(90),
     padding: '2%',
   },
   btn: {
-    width: '95%',
+    width: responsiveWidth(90),
     backgroundColor: global_variables.colors.green,
     padding: '4%',
     alignItems: 'center',
@@ -43,8 +51,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 25,
     position: 'absolute',
     bottom: 0,
-    paddingHorizontal: 10,
-    paddingVertical: 20,
+    paddingVertical: responsiveHeight(5),
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -57,23 +64,23 @@ const styles = StyleSheet.create({
   },
   glass: {
     height: 150,
-    width: '100%',
+    width: responsiveWidth(100),
     backgroundColor: 'rgba(255,255,255,0.3)',
     position: 'absolute',
-    top: '30%',
+    top: responsiveHeight(28),
     borderRadius: 50,
     borderColor: 'rgba(255,255,255,0.35)',
     borderWidth: 1,
   },
   leaves: {
-    height: '200%',
+    height: responsiveHeight(40),
     width: global_variables.dimensions.deviceWidth,
     resizeMode: 'contain',
-    marginTop: '-30%',
+    marginTop: responsiveHeight(-18),
     opacity: 0.7,
   },
   forgotPass: {
-    width: '90%',
+    width: responsiveWidth(90),
     justifyContent: 'flex-end',
     flexDirection: 'row',
     marginBottom: '10%',

@@ -125,6 +125,9 @@ const styles = StyleSheet.create({
     color: global_variables.colors.green,
     paddingTop: '2%',
   },
+  carousel: {
+    height: responsiveHeight(30),
+  },
 });
 
 export default styles;

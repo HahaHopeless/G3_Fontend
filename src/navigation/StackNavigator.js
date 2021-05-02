@@ -41,7 +41,6 @@ const AppTabs = createBottomTabNavigator(
 const AppStack = createStackNavigator({
   Login: {
     screen: LoginScreen,
-    screen: LoginScreen,
     navigationOptions: {
       headerRight: null,
       headerTitle: null,
@@ -54,7 +53,6 @@ const AppStack = createStackNavigator({
     screen: SignUpScreen,
     headerRight: null,
     headerTitle: null,
-    screen: SignUpScreen,
     navigationOptions: {
       headerTitleStyle: {
         color: global_variables.colors.green,

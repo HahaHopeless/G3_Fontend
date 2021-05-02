@@ -1,14 +1,7 @@
 import styles from './styles';
 import global_variables from '../../../global_variables';
 import React, {useState} from 'react';
-import {
-  View,
-  Image,
-  Text,
-  TouchableOpacity,
-  ScrollView,
-  Platform,
-} from 'react-native';
+import {View, Image, Text, TouchableOpacity} from 'react-native';
 import Carousel, {Pagination} from 'react-native-snap-carousel';
 import CarouselCardItem from '../../components/CarouselCardItem';
 import {StyleProvider} from 'native-base';

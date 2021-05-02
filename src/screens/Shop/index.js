@@ -5,7 +5,7 @@ import {View, ScrollView} from 'react-native';
 import Grid from 'react-native-grid-component';
 import GrocerItem from '../../components/GrocerItem';
 
-const GrocerScreen = ({navigation}) => {
+const ShopScreen = ({navigation}) => {
   const renderItem = (data, i) => (
     <GrocerItem label={data.label} image={data.image} key={i} />
   );
@@ -28,4 +28,4 @@ const GrocerScreen = ({navigation}) => {
   );
 };
 
-export default GrocerScreen;
+export default ShopScreen;
